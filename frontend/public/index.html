@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -21,4 +21,80 @@
         }
     </script>
 </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring Boot Calc Frontend</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f6f8;
+        }
+
+        .card {
+            background: white;
+            padding: 24px;
+            border-radius: 8px;
+            max-width: 400px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        input {
+            width: 80px;
+            padding: 8px;
+            margin: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 8px 16px;
+            font-size: 16px;
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .result {
+            margin-top: 16px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #1e293b;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h2>Simple Calculator</h2>
+        <div>
+            <input label="left" placeholder="First Number" type="number" id="left" value="100"> +
+            <input label="right" placeholder="Second number" type="number" id="right" value="100">
+            <button onclick="calculate()">=</button>
+        </div>
+        <div class="result" id="result">Answer: 200</div>
+    </div>
+
+    <script>
+        async function calculate() {
+            const left = document.getElementById('left').value;
+            const right = document.getElementById('right').value;
+            try {
+                const response = await fetch(`/api/calc?left=${left}&right=${right}`);
+                const data = await response.json();
+                document.getElementById('result').innerText = `Answer: ${data.answer}`;
+            } catch (err) {
+                document.getElementById('result').innerText = 'Error calling backend';
+            }
+        }
+    </script>
+</body>
+
 </html>
