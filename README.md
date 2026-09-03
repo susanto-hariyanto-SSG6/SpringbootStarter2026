@@ -8,14 +8,14 @@ Welcome! This repository serves as the baseline project and pre-class environmen
 
 Complete all steps below before attending class:
 
-- [ ] Install **OpenJDK 21 (LTS)** & **Node.js (v20+)** on Windows
-- [ ] **VS Code Extensions Installed** (Java, Spring Boot, Lombok, Docker, npm)
-- [ ] Implement `HelloController` in `helloworld/` using `@RequiredArgsConstructor`
-- [ ] Test Spring Boot backend locally at `http://localhost:8080/calc?left=100&right=100`
-- [ ] Create `helloworld/Dockerfile` and run Spring Boot in Docker
-- [ ] Build Node.js Express frontend in `frontend/` with its `Dockerfile`
-- [ ] Create `docker-compose.yml` in the parent root directory and test the full stack at `http://localhost:3000`
-- [ ] Fork this repository, commit your setup, and submit a **Pull Request (PR)**
+- [X] Install **OpenJDK 21 (LTS)** & **Node.js (v20+)** on Windows
+- [X] **VS Code Extensions Installed** (Java, Spring Boot, Lombok, Docker, npm)
+- [X] Implement `HelloController` in `helloworld/` using `@RequiredArgsConstructor`
+- [X] Test Spring Boot backend locally at `http://localhost:8080/calc?left=100&right=100`
+- [X] Create `helloworld/Dockerfile` and run Spring Boot in Docker
+- [X] Build Node.js Express frontend in `frontend/` with its `Dockerfile`
+- [X] Create `docker-compose.yml` in the parent root directory and test the full stack at `http://localhost:3000`
+- [X] Fork this repository, commit your setup, and submit a **Pull Request (PR)**
 
 ---
 
